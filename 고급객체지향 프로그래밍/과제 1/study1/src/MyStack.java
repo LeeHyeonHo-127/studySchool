@@ -9,7 +9,7 @@ public class MyStack<E>{
     int size;
     E[] stack;
 
-     public MyStack(){ // 1. 외부 제네릭 사용하기
+     public MyStack(){
 
         this.size = size;
         this.stack = (E[]) new Object[10];
@@ -37,7 +37,7 @@ public class MyStack<E>{
     }
 
 
-    public class ObjectDynamicArray implements Iterable<Object> { //MARK: Iterator 사용하기
+    public static class ObjectDynamicArray implements Iterable<Object> {
         private int length;
         private int capacity;
         private Object[] data;
