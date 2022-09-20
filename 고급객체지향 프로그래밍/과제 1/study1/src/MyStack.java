@@ -2,38 +2,41 @@ import java.util.Iterator;
 import java.util.*;
 
 
-public class MyStack<E>{
-    private int top;
-    private E field;
+public class MyStack<E> implements Iterable<E>{
+    private ArrayList<E> list;
 
-    int size;
-    E[] stack;
+    class MyStackIterator<E> implements Iterator<E>{
+        private int index;
 
+        public MyStackIterator(){
+            index = list.size() -1;
+        }
+
+        public boolean hasnext(){
+            return index >=0;
+        }
+        public E next(){
+            E e = (E) list.get(index);
+            index--;
+            return e;
+        }
+
+
+    }
      public MyStack(){
-
-        this.size = size;
-        this.stack = (E[]) new Object[10];
-        top = -1;
+         list = new ArrayList<E>();
     }
 
     public void push(E e) {
-        stack[++top] = e;
-        System.out.println(stack[top] + " Push!");
+        list.add(e);
     }
 
     public E pop() {
-        System.out.println(stack[top] + " Pop!");
-        E pop = stack[top];
-        top--;
-        return pop;
+
     }
 
     public boolean isEmpty() {
-        if (top == -1) {
-            return true;
-        } else {
-            return false;
-        }
+
     }
 
 
