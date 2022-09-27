@@ -1,0 +1,11 @@
+echo "Are you OK. (y/n): "
+read ans
+
+if [[ $ans == [Yy]* ]]
+then
+	echo "Happy to hear it"
+elif [[ $ans == [No] ]]
+	echo "That's too bad."
+else
+	echo "HI"
+fi
