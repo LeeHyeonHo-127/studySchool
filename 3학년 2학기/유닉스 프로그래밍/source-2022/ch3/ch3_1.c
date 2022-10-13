@@ -3,9 +3,8 @@
 #include <unistd.h>
 #include <stdio.h>
 
-int main() {
+int main(){
     struct stat statbuf;
-
     stat("linux.txt", &statbuf);
 
     printf("Inode = %d\n", (int)statbuf.st_ino);
