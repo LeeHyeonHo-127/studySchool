@@ -91,6 +91,8 @@ public class MainWindow extends FrameWindow {
         // 장식이 모두 끝나면 최종 디스플레이 패널을 생성하도록 함. 장식 패널들을 포함하는 최종 패널이 만들어지고, 이것을 새로운 패널에 부착 시킴
         panel.add(display.create());
 
+        System.out.println("disply.height = " + display.getHeight());
+
         // 디스플레이마다 각각의 내용을 화면에 보임
         display.show();
         return panel;
